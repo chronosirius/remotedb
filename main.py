@@ -14,4 +14,4 @@ def update():
     f.write(request.form['new'])
   return "", 200
   
-app.run('0.0.0.0', int(environ.get('PORT', 80))
+app.run('0.0.0.0', int(environ.get('PORT', 80)))
