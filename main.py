@@ -5,8 +5,11 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-  with open('save.json') as f:
-    return f.read(), 200
+  try:
+    with open('save.json') as f:
+      return f.read(), 200
+  except:
+    return "", 200
 
 @app.route('/update', methods=['POST'])
 def update():
