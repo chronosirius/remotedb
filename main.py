@@ -13,7 +13,7 @@ def index():
 
 @app.route('/update', methods=['POST'])
 def update():
-  if request.form('password') == environ['password']:
+  if request.form['password'] == environ['password']:
     with open('save.json', 'w') as f:
       f.write(request.form['new'])
     return "", 200
